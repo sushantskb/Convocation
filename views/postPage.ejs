@@ -1,49 +1,39 @@
-<div class="col-8">
+<div class="col-8 mx-auto" style="margin-top: 218px;">
     <form action="" enctype="multipart/form-data" method="post">
-      <div class="row g-3">
-        <div class="col-12">
-          <label for="text" class="form-label">Name</label>
-          <input type="text" name="name" id="email" class="form-control" />
-        </div>
-        <div class="col-12">
-          <label for="email" class="form-label">Email</label>
-          <input type="text" name="email" id="email" class="form-control" />
-        </div>
-        <div class="col-12">
-          <label for="registration" class="form-label">Registration Number</label>
-          <input type="text" name="reg_no" id="name" class="form-control" />
-        </div>
+        <div class="row g-3">
+            <div class="col-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" />
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" id="email" class="form-control" />
+            </div>
+            <div class="col-12">
+                <label for="reg_no" class="form-label">Registration Number</label>
+                <input type="text" name="reg_no" id="reg_no" class="form-control" />
+            </div>
 
-        <div class="col-12">
-          <label for="category">Select Category</label>
-          <select
-            name="category"
-            class="form-select form-control"
-            arial-label="Category"
-          >
-            <option selected>Select Category</option>
-            <option value="CSE">CSE</option>
-            <option value="ECE">ECE</option>
-            <option value="CHEM">Chemical</option>
-            <option value="MECH">Mechanical</option>
-            <option value="CIVIL">Civil</option>
-          </select>
-        </div>
+            <div class="col-12">
+                <label for="category" class="form-label">Select Category</label>
+                <select name="category" class="form-select form-control" aria-label="Category">
+                    <option selected>Select Category</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CHEM">Chemical</option>
+                    <option value="MECH">Mechanical</option>
+                    <option value="CIVIL">Civil</option>
+                </select>
+            </div>
 
-        <div class="col-12">
-          <label for="image">Upload your image</label>
-          <input
-            type="file"
-            class="form-control"
-            name="image"
-            accept="image/*"
-          />
-        </div>
+            <div class="col-12">
+                <label for="image" class="form-label">Upload your image</label>
+                <input type="file" class="form-control" name="image" accept="image/*" />
+            </div>
 
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
-      </div>
     </form>
-  </div>
 </div>
