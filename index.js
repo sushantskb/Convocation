@@ -25,7 +25,7 @@ app.use(session({
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
-const routes = require("./server/routes/userRoutes");
+const routes = require("./server/routes/routes");
 app.use("/", routes);
 
 app.listen(port, ()=>{
