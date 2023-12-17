@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/adminCss.css">
+<div>
+    <p>
+        Total Registrations: <span id="userCount"><%= lists.length %></span>
+    </p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>SL.No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registrations Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% lists.forEach(function(list, index) { %> 
+        <tr>
+            <td><%= index + 1 %></td> 
+            <td>
+                <a href="/details"><%= list.name %></a>
+            </td>
+            <td><%= list.email %></td>
+            <td><%= list.reg_no %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
