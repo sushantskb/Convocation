@@ -11,7 +11,18 @@
   <% } %>
   <!-- End -->
 
-  <div class="col-8 mx-auto">
+  <% if (infoSubmitObj != '' && infoSubmitObj.includes("Your data has been added.")) { %>
+        <div class="col-12 mt-3 text-center">
+            <label class="form-label">Uploaded Image:</label>
+            <img src="/upload/<%= newImageName %>" alt="Uploaded Image" class="img-fluid" style="border-radius: 10px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+            width: 150px;" />
+        </div>
+    <% } %>
+
+  <div class="col-8 mx-auto" style="margin-top: 170px;">
       <form action="/submit" enctype="multipart/form-data" method="post">
           <div class="row g-3">
               <div class="col-12">
@@ -48,11 +59,5 @@
             </div>
         </form>
     
-        <!-- Display uploaded image -->
-        <% if (infoSubmitObj != '' && infoSubmitObj.includes("Your data has been added.")) { %>
-            <div class="col-12 mt-3">
-                <label class="form-label">Uploaded Image:</label>
-                <img src="/upload/<%= newImageName %>" alt="Uploaded Image" class="img-fluid" />
-            </div>
-        <% } %>
+        
   </div>
