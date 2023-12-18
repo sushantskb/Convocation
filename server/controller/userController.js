@@ -14,18 +14,20 @@ exports.loginAction = async (req, res) => {
     if (username === "admin") {
       if (password === process.env.ADPASS) {
         return res.redirect("/admin");
+      } else{
+        return res.render("login", { err: "Password is incorrect!" });
       }
     } else {
       const user = await User.findOne({ username: username });
       if (user.password === password) {
         return res.redirect("submit");
       } else {
-        return res.render("login", { message: "Incorrect Password" });
+        return res.render("login", { err: "Incorrect Password" });
       }
     }
   } catch (error) {
     console.log(error);
-    return res.render("login", { messasge: "Error occured,Please try again" });
+    return res.render("login", { err: "No such user found" });
   }
 };
 
