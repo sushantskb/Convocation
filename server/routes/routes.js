@@ -8,6 +8,6 @@ router.get("/", userController.home);
 router.get("/submit", submitController.submitInfo);
 router.post("/submit", submitController.submitInfoOnPost);
 router.get("/admin", adminController.adminData);
-router.get("/details", adminController.detailPage);
+router.get("/details/:id", adminController.detailPage);
 
 module.exports = router;

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8f8; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+}
+
+#resume {
+    padding: 60px 0;
+    color: #333;
+}
+
+.container {
+    padding: 10px 5%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resume-col-1,
+.resume-col-2 {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-col-1 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+}
+
+.title{
+    font-size: 70px;
+    padding-bottom: 20px;
+    
+}
+
+.resume-col-2 h1.sub-title {
+    font-size: 36px;
+}
+
+.resume-col-2 p.subtitle {
+    color: #777;
+}
+
+.resume-col-2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-col-2 li {
+    margin-bottom: 15px;
+}
+
+.buybtn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.buybtn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Adding a subtle box-shadow effect on hover for the profile picture */
+.resume-col-1 img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}

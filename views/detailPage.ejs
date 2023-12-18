@@ -1,1 +1,25 @@
-<h1>detailPage</h1>
+<link rel="stylesheet" href="/css/detail.css">
+<% if(detail != null) { %>
+<div id="resume">
+    <div class="container">
+      <div class="row">
+        <div class="resume-col-1">
+            <h1 class="title" style="color: rgb(0, 0, 0);">About</h1>
+          <img src="/upload/<%- detail.image %>" class="pf" alt="Profile Picture">
+        </div>
+
+        <div class="resume-col-2">
+          <h1 class="sub-title" style="color: #333;"><%- detail.name %></h1>
+          <p class="subtitle"><%- detail.category %></p>
+          <ul>
+            <li><strong>Email:</strong><%- detail.email %></li>
+            <li><strong>Registration Number:</strong> <%- detail.reg_no %></li>
+          </ul>
+          <a href="/admin"><button class="buybtn">Go Back</button></a>
+        </div>
+      </div>
+    </div>
+</div>
+<% } else { %>
+    <p>Details not found</p>
+<% } %>

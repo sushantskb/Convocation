@@ -13,7 +13,9 @@ exports.adminData = async (req, res) => {
 
 exports.detailPage = async (req, res) => {
     try{
-        res.render("detailPage");
+        const detailId = req.params.id;
+        const detail = await Submit.findById(detailId);
+        res.render("detailPage", {detail});
     } catch(err){
         console.log(err);
     }
