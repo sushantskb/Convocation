@@ -4,6 +4,7 @@ const fileUpload = require("express-fileupload");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
+// const bodyParser = require("body-parser")
 
 const app = express();
 const port = process.env.PORT || 6969;
@@ -11,6 +12,7 @@ const port = process.env.PORT || 6969;
 require("dotenv").config();
 
 app.use(express.urlencoded({extended: true}));
+// app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.use(flash());
